@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>To-Do List</h1>
+      <button id="theme-toggle">🌙</button>
+    </header>
+
+    <form id="task-form" autocomplete="off">
+      <input id="task-input" type="text" placeholder="Add a new task..." required>
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="filter">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="completed">Completed</button>
+    </div>
+
+    <div class="sort">
+      <button data-sort="newest" class="active">Newest</button>
+      <button data-sort="oldest">Oldest</button>
+      <button data-sort="completed">Completed First</button>
+      <button data-sort="active">Active First</button>
+    </div>
+
+    <ul id="tasks-list"></ul>
+
+    <div class="controls">
+      <button id="clear-completed">Clear Completed</button>
+      <button id="clear-all">Clear All</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
